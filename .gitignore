@@ -3,6 +3,7 @@ node_modules
 
 # Environment variables
 .env
+sessionKey.txt
 
 # Mac files
 .DS_Store
