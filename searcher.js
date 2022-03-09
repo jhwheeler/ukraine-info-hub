@@ -41,7 +41,7 @@ async function search (client) {
 
   const res = await client.invoke(new Api.messages.SearchGlobal({
     flags: 1,
-    folderId: 0,
+    folderId: 1, // only search archived chats
     q: query,
     filter: new Api.ChannelMessagesFilterEmpty(),
     minDate: (Date.now()/1000) - (ONE_DAY * NUMBER_OF_DAYS),
