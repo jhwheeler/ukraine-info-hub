@@ -33,9 +33,7 @@ async function login (client) {
   fs.writeFile(SESSION_KEY_FILE, client.session.save())
 }
 
-async function search (client) {
-  const query = await input.text('Query:')
-
+async function search(client, query) {
   const ONE_DAY = 86400; // seconds
   const NUMBER_OF_DAYS = 7; // how many days to search back
 
@@ -68,7 +66,15 @@ async function search (client) {
 
   console.log(`Search result for '${query}'`, filteredResults);
 
-  search(client);
+  return filteredResults
+}
+
+async function interactiveSearch (client) {
+  const query = await input.text('Query:')
+
+  await search(client, query)
+
+  interactiveSearch(client);
 }
 
 async function init () {
@@ -83,7 +89,7 @@ async function init () {
 
   if (!client.session.save()) await login(client);
 
-  search(client);
+  interactiveSearch(client);
 }
 
 init()
