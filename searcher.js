@@ -56,15 +56,14 @@ async function search (client) {
 
     const userId = fromId ? fromId.userId : peerId.userId
 
-    if (scam) console.log('This message is scam', messageObject)
-      if (!scam) {
-        filtered.push({
-          message,
-          userId,
-        })
-      }
+    if (!scam) {
+      filtered.push({
+        message,
+        userId,
+      })
+    }
 
-      return filtered
+    return filtered
   }, [])
 
   console.log(`Search result for '${query}'`, filteredResults);
