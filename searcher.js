@@ -68,7 +68,7 @@ async function search (client) {
 
   console.log(`Search result for '${query}'`, filteredResults);
 
-  search();
+  search(client);
 }
 
 async function init () {
