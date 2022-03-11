@@ -21,9 +21,7 @@ function init (ctx) {
   ctx.reply(welcomeMessage, keyboard.inline())
 }
 
-bot.start(init)
-
-bot.on('callback_query', (ctx) => {
+function handleCallback (ctx) {
   const data = JSON.parse(ctx.callbackQuery.data)
   console.log('data', data)
 
@@ -41,7 +39,11 @@ bot.on('callback_query', (ctx) => {
   }
 
   return ctx.answerCbQuery('Loading...')
-})
+}
+
+bot.start(init)
+
+bot.on('callback_query', (ctx) => handleCallback(ctx))
 
 bot.launch();
 
