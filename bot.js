@@ -5,6 +5,11 @@ require('dotenv').config();
 
 const bot = new Telegraf(process.env.TELEGRAF_BOT_TOKEN);
 
+const ActionType = {
+  Link: 'link',
+  Input: 'input',
+}
+
 const MESSAGE_NOT_FOUND = "Sorry, I don't understand your message. Please try something else."
 
 function generateKeyboard (node) {
@@ -21,21 +26,33 @@ function init (ctx) {
   ctx.reply(welcomeMessage, keyboard.inline())
 }
 
-function handleCallback (ctx) {
-  const data = JSON.parse(ctx.callbackQuery.data)
-  console.log('data', data)
-
-  if (data.type === 'link') {
-    const destination = messages[data.destination]
-    if (!destination) {
+function navigate (ctx, destination) {
+    const destinationValue = messages[destination]
+    if (!destinationValue) {
       ctx.reply(MESSAGE_NOT_FOUND)
       return
     }
 
-    const { message } = destination
+    const { message, buttons } = destinationValue
     if (!message) return
 
+    if (buttons) {
+      const keyboard = generateKeyboard(destination)
+      ctx.reply(message, keyboard.inline())
+      return
+    }
+
     ctx.reply(message)
+}
+
+function handleCallback (ctx) {
+  const data = JSON.parse(ctx.callbackQuery.data)
+  console.log('data', data)
+
+  const { destination, type } = data
+
+  if (type === ActionType.Link) {
+    navigate(ctx, destination)
   }
 
   return ctx.answerCbQuery('Loading...')
