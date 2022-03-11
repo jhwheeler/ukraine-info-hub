@@ -3,9 +3,13 @@
   "description": "Let's connect people who need help due to the invasion of Ukraine with those who can help!",
   "author": "Jackson Holiday Wheeler",
   "version": "1.0.0",
+  "scripts": {
+    "start": "node bot.js"
+  },
   "dependencies": {
     "dotenv": "^16.0.0",
-    "telegraf": "^4.7.0"
+    "telegraf": "^4.7.0",
+    "telegram-keyboard": "^2.3.0"
   },
   "devDependencies": {
     "input": "^1.0.1",
