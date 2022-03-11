@@ -1,6 +1,6 @@
 const Telegraf = require('telegraf').Telegraf
 const { Keyboard, Key } = require('telegram-keyboard')
-const messages = require('./bot-messages.json')
+const messages = require('./messages.json')
 require('dotenv').config();
 
 const bot = new Telegraf(process.env.TELEGRAF_BOT_TOKEN);
