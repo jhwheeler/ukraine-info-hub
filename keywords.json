@@ -1,0 +1,37 @@
+{
+  "help": {
+    "languages": {
+      "ru": ["помощ", "помоч", "помог", "помож"],
+      "ua": ["помаг", "помог", "помож"],
+      "en": ["help", "aid", "assist"]
+    }
+  },
+  "ukraine": {
+    "languages": {
+      "ru": ["украин"],
+      "ua": ["україн"],
+      "en": ["ukrain"]
+    }
+  },
+  "refugees": {
+    "languages": {
+      "ru": ["бежен"],
+      "ua": ["біжен"],
+      "en": ["refugee"]
+    }
+  },
+  "humanitarian": {
+    "languages": {
+      "ru": ["гуманитар"],
+      "ua": ["гуманітар"],
+      "en": ["humanitarian"]
+    }
+  },
+  "support": {
+    "languages": {
+      "ru": ["поддерж"],
+      "ua": ["підтрим"],
+      "en": ["support"]
+    }
+  }
+}
