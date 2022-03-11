@@ -33,16 +33,13 @@
     ]
   },
   "donate": {
-    "message": "Thank you for helping. Here are charities collecting donations for people in need:",
-    "action": "show_donation_urls"
+    "message": "Thank you for helping. Here are charities collecting donations for people in need:"
   },
   "main_info": {
-    "message": "We have collected different groups and resources for people helping those in need:",
-    "action": "show_info_and_links"
+    "message": "We have collected different groups and resources for people helping those in need:"
   },
   "about_us": {
-    "message": "Grow Ukraine is a group of volunteers working to solve the complex logistics of humanitarian aid delivery",
-    "action": "show_about_info"
+    "message": "Grow Ukraine is a group of volunteers working to solve the complex logistics of humanitarian aid delivery"
   },
   "number_of_people_looking_for_shelter": {
     "message": "How many people are looking for shelter?",
