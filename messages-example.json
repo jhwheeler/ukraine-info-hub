@@ -1,0 +1,52 @@
+{
+  "root_message": {
+    "message": "What do you need?",
+    "buttons": [
+      {
+        "message": "Help",
+        "action": {
+          "type": "link",
+          "destination": "need_help_from_location"
+        }
+      },
+      {
+        "message": "Donate",
+        "action": {
+          "type": "link",
+          "destination": "donate"
+        }
+      },
+      {
+        "message": "Main Info",
+        "action": {
+          "type": "link",
+          "destination": "main_info"
+        }
+      },
+      {
+        "message": "About Us",
+        "action": {
+          "type": "link",
+          "destination": "about_us"
+        }
+      }
+    ]
+  },
+  "donate": {
+    "message": "Thank you for helping. Here are charities collecting donations for people in need:"
+  },
+  "main_info": {
+    "message": "We have collected different groups and resources for people helping those in need:"
+  },
+  "about_us": {
+    "message": "Grow Ukraine is a group of volunteers working to solve the complex logistics of humanitarian aid delivery"
+  },
+  "number_of_people_looking_for_shelter": {
+    "message": "How many people are looking for shelter?",
+    "action": {
+      "type": "input",
+      "input_type": "number",
+      "post_action_destination": "how_many_days_need_shelter"
+    }
+  }
+}
