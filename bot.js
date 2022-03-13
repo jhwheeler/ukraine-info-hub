@@ -1,8 +1,8 @@
 const { Bot, InlineKeyboard } = require('grammy')
 const messages = require('./messages.json')
-require('dotenv').config();
+require('dotenv').config()
 
-const bot = new Bot(process.env.TELEGRAM_BOT_TOKEN);
+const bot = new Bot(process.env.TELEGRAM_BOT_TOKEN)
 
 const ActionType = {
   Link: 'link',
