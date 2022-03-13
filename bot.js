@@ -23,7 +23,7 @@ function generateKeyboard (node) {
 
 function init (ctx) {
   const welcomeMessage = 'Welcome to the Grow Ukraine Chat Bot'
-  const keyboard = generateKeyboard('root_message')
+  const keyboard = generateKeyboard('root')
 
   ctx.reply(welcomeMessage, { reply_markup: keyboard })
 }
