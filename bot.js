@@ -1,9 +1,8 @@
-const Telegraf = require('telegraf').Telegraf
-const { Keyboard, Key } = require('telegram-keyboard')
+const { Bot, InlineKeyboard } = require('grammy')
 const messages = require('./messages.json')
 require('dotenv').config();
 
-const bot = new Telegraf(process.env.TELEGRAF_BOT_TOKEN);
+const bot = new Bot(process.env.TELEGRAM_BOT_TOKEN);
 
 const ActionType = {
   Link: 'link',
@@ -13,17 +12,20 @@ const ActionType = {
 const MESSAGE_NOT_FOUND = "Sorry, I don't understand your message. Please try something else."
 
 function generateKeyboard (node) {
-  const buttons = messages[node].buttons
-    .map(button => Key.callback(button.message, JSON.stringify(button.action)))
+  let keyboard = new InlineKeyboard()
 
-  return Keyboard.make([buttons])
+  for (const button of messages[node].buttons) {
+    keyboard = keyboard.text(button.message, JSON.stringify(button.action))
+  }
+
+  return keyboard
 }
 
 function init (ctx) {
   const welcomeMessage = 'Welcome to the Grow Ukraine Chat Bot'
   const keyboard = generateKeyboard('root_message')
 
-  ctx.reply(welcomeMessage, keyboard.inline())
+  ctx.reply(welcomeMessage, { reply_markup: keyboard })
 }
 
 function navigate (ctx, destination) {
@@ -38,7 +40,7 @@ function navigate (ctx, destination) {
 
     if (buttons) {
       const keyboard = generateKeyboard(destination)
-      ctx.reply(message, keyboard.inline())
+      ctx.reply(message, { reply_markup: keyboard })
       return
     }
 
@@ -55,14 +57,13 @@ function handleCallback (ctx) {
     navigate(ctx, destination)
   }
 
-  return ctx.answerCbQuery('Loading...')
+  return ctx.answerCallbackQuery('Loading...')
 }
 
-bot.start(init)
+bot.start()
+bot.command('start', init)
 
-bot.on('callback_query', (ctx) => handleCallback(ctx))
-
-bot.launch();
+bot.on('callback_query:data', (ctx) => handleCallback(ctx))
 
 console.log('Grow Ukraine bot is connected');
 
