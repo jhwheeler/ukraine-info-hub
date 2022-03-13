@@ -1,4 +1,6 @@
 import json
+import gettext
+
 import pycountry
 
 
@@ -7,96 +9,100 @@ from utils import (
     action_link,
     action_input,
     button,
-    links_to_check,
     get_country_importance,
     fix_country_name,
+)
+
+from utils import (
+    links_to_check,
+    all_translation_keys,
 )
 
 
 messages = {
     'root': message(
-        'What do you need?',
+        'what_do_you_need_message',
         buttons=[
-            button('Help', action_link('i_am_now_in')),
-            button('Donate', action_link('donate')),
-            button('Main Info', action_link('main_info')),
-            button('About Us', action_link('about_us')),
+            button('help_button', action_link('i_am_now_in')),
+            button('donate_button', action_link('donate')),
+            button('main_info_button', action_link('main_info')),
+            button('about_us_button', action_link('about_us')),
         ],
     ),
-    'donate': message('Thank you for helping. Here are charities collecting donations for people in need:'),
-    'main_info': message('We have collected different groups and resources for people helping those in need:'),
-    'about_us': message('Grow Ukraine is a group of volunteers working to solve the complex logistics of humanitarian aid delivery'),
+    'donate': message('donate_links_message'),
+    'main_info': message('main_info_message'),
+    'about_us': message('about_us_message'),
     'i_am_now_in': message(
-        'I am now in...',
+        'i_am_now_in_message',
         buttons=[
-            button('Country Ukraine', action_link('i_need'), context={'Country': 'Ukraine'}),
-            button('Other country', action_link('select_counry_currently_in')),
+            # button('country_ukraine', action_link('i_need'), context={'Country': 'Ukraine'}),
+            button('other_country_button', action_link('select_counry_currently_in')),
         ],
     ),
     'select_counry_currently_in': message(
-        'Select a country',
+        'select_a_country_message',
         buttons=[
-            button(fix_country_name(c.name), action_link('i_need'), context={'Country': fix_country_name(c.name)})
-            for c in sorted(pycountry.countries, key=lambda c: get_country_importance(c))
+            # button(fix_country_name(c.name), action_link('i_need'), context={'Country': fix_country_name(c.name)})
+            # for c in sorted(pycountry.countries, key=lambda c: get_country_importance(c))
         ],
     ),
     'i_need': message(
-        'I need',
+        'i_need_message',
         buttons=[
-            button('Help', action_link('i_need_help'), context={'Need': 'Help'}),
-            button('Job', action_link('i_need_job'), context={'Need': 'Job'}),
+            button('i_need_help_button', action_link('i_need_help'), context={'Need': 'Help'}),
+            button('i_need_job_button', action_link('i_need_job'), context={'Need': 'Job'}),
         ],
     ),
     'i_need_help': message(
-        'I need help with',
+        'i_need_help_with_message',
         buttons=[
-            button('Shelter', action_link('i_need_shelter'), context={'NeedType': 'Shelter'}),
-            button('Medical support', action_link('i_need_medical_support'), context={'Need': 'MedicalSupport'}),
-            button('Material support', action_link('i_need_material_support'), context={'Need': 'Material'}),
-            button('Jewish organizations', action_link('i_need_jewish_organization'), context={'Need': 'Jews'}),
-            button('Psychological support', action_link('i_need_psychological'), context={'Need': 'Psychological'}),
-            button('Lawyers', action_link('i_need_lawyers'), context={'Need': 'Lawyer'}),
+            button('shelter_button', action_link('i_need_shelter'), context={'NeedType': 'Shelter'}),
+            button('medical_support_button', action_link('i_need_medical_support'), context={'Need': 'MedicalSupport'}),
+            button('material_support_button', action_link('i_need_material_support'), context={'Need': 'Material'}),
+            button('jewish_organization_button', action_link('i_need_jewish_organization'), context={'Need': 'Jews'}),
+            button('psychological_support_button', action_link('i_need_psychological'), context={'Need': 'Psychological'}),
+            button('lawyers_button', action_link('i_need_lawyers'), context={'Need': 'Lawyer'}),
         ],
     ),
     'i_need_shelter': message(
-        'How many people are looking for shelter?',
-        action=action_input('number', 'how_many_people_need_shelter'),
+        'how_many_people_looking_shelter_message',
+        action=action_input('number', 'how_long_need_shelter'),
     ),
-    'how_many_people_need_shelter': message(
-        'How many people are looking for shelter?',
+    'how_long_need_shelter': message(
+        'how_long_need_shelter_message',
         action=action_input('number', 'data_processing_agreement'),
     ),
     'i_need_medical_support': message(
-        'What kind of medical support do you need?',
+        'i_need_medical_support_message',
         action=action_input('text', 'data_processing_agreement'),
     ),
     'i_need_material_support': message(
-        'What kind of material support do you need?',
+        'what_kind_material_support_message',
         action=action_input('text', 'data_processing_agreement'),
     ),
     'i_need_jewish_organization': message(
-        '___JEWISH INFO___',
+        'jewish_info_message',
         action=action_input('text', 'data_processing_agreement'),
     ),
     'i_need_psychological': message(
-        'Check out the following information: ___PSYCHOLOGICAL INFO___',
+        'psychological_info_message',
         action=action_input('text', 'root'),
     ),
     'i_need_lawyers': message(
-        'Check out the following information: ___LAWYER INFO___',
+        'lawyers_info_message',
         action=action_input('text', 'root'),
     ),
     'data_processing_agreement': message(
-        'Let\'s proceed.\nDo you give your consent tot the processing of your personal data (___agreement url___)?',
+        'data_processing_agreement_consent_message',
         buttons=[
-            button('No', action_link('______i_do_not_consent')),
-            button('Share your telegram contact', action_link('______')),
+            button('no_button', action_link('______i_do_not_consent')),
+            button('share_your_telegram_contact_message', action_link('______')),
         ],
     ),
     'i_need_job': message(
-        '___ JOB INFO ___',
+        'job_info_message',
         buttons=[
-            button('Back to main menu', action_link('root')),
+            button('back_to_main_menu_button', action_link('root')),
         ],
     ),
 }
@@ -114,6 +120,8 @@ for link in links_to_check:
 # if do_exit:
 #     print('\n------- ( ! ) ------- \nYou have links to messages which don\'t exist (see above). Please resolve this and try again. No output file generated.\n------- ( ! ) -------')
 #     exit()
+
+print('\n'.join(all_translation_keys))
 
 
 with open('messages.json', 'w') as f:
