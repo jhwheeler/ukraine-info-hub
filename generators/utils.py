@@ -1,7 +1,20 @@
+import gettext
+
+import pycountry
 import pycountry_convert
 
 
+german = gettext.translation('iso3166', pycountry.LOCALES_DIR, languages=['ru'])
+german.install()
+
+
 links_to_check = []
+all_translation_keys = set()
+
+
+def add_translation_key(message):
+    global all_translation_keys
+    all_translation_keys.add(message)
 
 
 def validate_action(action):
@@ -58,6 +71,8 @@ def action_input(input_type, destination):
 
 
 def button(message, action, context=None):
+    add_translation_key(message)
+
     return {
         'message': message,
         'action': action,
@@ -66,6 +81,8 @@ def button(message, action, context=None):
 
 
 def message(message, buttons=None, action=None):
+    add_translation_key(message)
+
     return {
         'message': message,
         **({'buttons': validate_buttons(buttons)} if buttons else {}),
@@ -98,9 +115,12 @@ def get_country_importance(country):
 
 
 def fix_country_name(country_name):
-    if country_name == 'Taiwan, Province of China':
-        return 'Taiwan'
+    # Taiwan is an independent state!
+    translated = _(country_name)
 
-    # TODO: remove `, United Republic of` from Tanzania etc.
+    if ','  in translated:
+        translated.split(',')[0]
+    
+    return translated
 
-    return country_name
+
