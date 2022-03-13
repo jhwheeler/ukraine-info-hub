@@ -15,7 +15,7 @@ function generateKeyboard (node) {
   let keyboard = new InlineKeyboard()
 
   for (const button of messages[node].buttons) {
-    keyboard = keyboard.text(button.message, JSON.stringify(button.action))
+    keyboard = keyboard.text(button.message, JSON.stringify(button.action)).row()
   }
 
   return keyboard
