@@ -60,10 +60,16 @@ function handleCallback (ctx) {
   return ctx.answerCallbackQuery('Loading...')
 }
 
-bot.start()
+
 bot.command('start', init)
 
 bot.on('callback_query:data', (ctx) => handleCallback(ctx))
 
-console.log('Grow Ukraine bot is connected');
+// Only used locally during development,
+// otherwise the bot is run on an Express server
+// found in app.js
+if (process.env.NODE_ENV === 'development') bot.start()
 
+module.exports = {
+  bot
+}
