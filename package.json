@@ -3,11 +3,13 @@
   "description": "Let's connect people who need help due to the invasion of Ukraine with those who can help!",
   "author": "Jackson Holiday Wheeler",
   "version": "1.0.0",
+  "main": "app.js",
   "scripts": {
-    "start": "DEBUG='grammy*' node bot.js"
+    "start": "DEBUG='grammy*' NODE_ENV=development node bot.js"
   },
   "dependencies": {
     "dotenv": "^16.0.0",
+    "express": "^4.17.3",
     "grammy": "^1.7.0"
   },
   "devDependencies": {
