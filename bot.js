@@ -65,11 +65,4 @@ bot.command('start', init)
 
 bot.on('callback_query:data', (ctx) => handleCallback(ctx))
 
-// Only used locally during development,
-// otherwise the bot is run on an Express server
-// found in app.js
-if (process.env.NODE_ENV === 'development') bot.start()
-
-module.exports = {
-  bot
-}
+bot.start()

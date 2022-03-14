@@ -5,11 +5,11 @@
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
-    "start": "DEBUG='grammy*' NODE_ENV=development node bot.js"
+    "dev": "DEBUG='grammy*' node bot.js",
+    "start": "node bot.js"
   },
   "dependencies": {
     "dotenv": "^16.0.0",
-    "express": "^4.17.3",
     "grammy": "^1.7.0"
   },
   "devDependencies": {
