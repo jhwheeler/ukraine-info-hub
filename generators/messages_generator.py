@@ -124,5 +124,5 @@ for link in links_to_check:
 print('\n'.join(all_translation_keys))
 
 
-with open('messages.json', 'w') as f:
+with open('static/messages.json', 'w') as f:
     f.write(json.dumps(messages, indent=2))

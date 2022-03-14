@@ -1,5 +1,5 @@
 const { Bot, InlineKeyboard } = require('grammy')
-const messages = require('./messages.json')
+const messages = require('../static/messages.json')
 require('dotenv').config()
 
 const bot = new Bot(process.env.TELEGRAM_BOT_TOKEN)
