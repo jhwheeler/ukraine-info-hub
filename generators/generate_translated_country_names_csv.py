@@ -1,19 +1,8 @@
 import csv
 import gettext
+from utils import fix_country_name, country_name_to_key
 
 import pycountry
-
-
-def fix_country_name(country_name):
-    # Taiwan is an independent state!
-    if ',' in country_name:
-        country_name = country_name.split(',')[0]
-    
-    return country_name
-
-
-def country_name_to_key(country_name):
-    return country_name.replace(' ', '_').replace('(', '').replace(')', '').replace('\'', '').lower() + '_country'
 
 
 with open('country_translations.csv', 'w') as f:
