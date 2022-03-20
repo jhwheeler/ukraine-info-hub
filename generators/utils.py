@@ -1,15 +1,31 @@
-import gettext
 
-import pycountry
+from unidecode import unidecode
+
 import pycountry_convert
-
-
-german = gettext.translation('iso3166', pycountry.LOCALES_DIR, languages=['ru'])
-german.install()
 
 
 links_to_check = []
 all_translation_keys = set()
+
+
+def fix_country_name(country_name):
+    # Taiwan is an independent state!
+    if ',' in country_name:
+        country_name = country_name.split(',')[0]
+    
+    return country_name
+
+
+def country_name_to_key(country_name):
+    return unidecode(
+        country_name
+        .replace(' ', '_')
+        .replace('(', '')
+        .replace(')', '')
+        .replace('\'', '')
+        .lower()
+         + '_country'
+    )
 
 
 def add_translation_key(message):
@@ -114,13 +130,4 @@ def get_country_importance(country):
     return 9
 
 
-def fix_country_name(country_name):
-    # Taiwan is an independent state!
-    translated = _(country_name)
-
-    if ','  in translated:
-        translated.split(',')[0]
-    
-    return translated
-
-
+main_menu_button = {'buttons': [button('main_menu_button', action_link('main_menu'))]}

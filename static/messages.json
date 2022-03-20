@@ -1,12 +1,47 @@
 {
   "root": {
+    "message": "select_language_message",
+    "buttons": [
+      {
+        "message": "language_english_button",
+        "action": {
+          "type": "link",
+          "destination": "main_menu"
+        },
+        "context": {
+          "Language": "English"
+        }
+      },
+      {
+        "message": "language_ukranian_button",
+        "action": {
+          "type": "link",
+          "destination": "main_menu"
+        },
+        "context": {
+          "Language": "Ukranian"
+        }
+      },
+      {
+        "message": "language_russian_button",
+        "action": {
+          "type": "link",
+          "destination": "main_menu"
+        },
+        "context": {
+          "Language": "Russian"
+        }
+      }
+    ]
+  },
+  "main_menu": {
     "message": "what_do_you_need_message",
     "buttons": [
       {
         "message": "help_button",
         "action": {
           "type": "link",
-          "destination": "i_am_now_in"
+          "destination": "need_help_i_am_now_in"
         }
       },
       {
@@ -29,6 +64,13 @@
           "type": "link",
           "destination": "about_us"
         }
+      },
+      {
+        "message": "i_can_help_button",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        }
       }
     ]
   },
@@ -41,42 +83,2706 @@
   "about_us": {
     "message": "about_us_message"
   },
-  "i_am_now_in": {
+  "need_help_i_am_now_in": {
     "message": "i_am_now_in_message",
     "buttons": [
+      {
+        "message": "country_ukraine",
+        "action": {
+          "type": "link",
+          "destination": "select_ukrainian_city"
+        },
+        "context": {
+          "Country": "Ukraine"
+        }
+      },
       {
         "message": "other_country_button",
         "action": {
           "type": "link",
-          "destination": "select_counry_currently_in"
+          "destination": "select_important_country"
         }
       }
     ]
   },
-  "select_counry_currently_in": {
-    "message": "select_a_country_message"
-  },
-  "i_need": {
-    "message": "i_need_message",
+  "select_ukrainian_city": {
+    "message": "select_which_city_message",
     "buttons": [
       {
-        "message": "i_need_help_button",
+        "message": "kyiv_country",
         "action": {
           "type": "link",
-          "destination": "i_need_help"
+          "destination": "i_can_help"
         },
         "context": {
-          "Need": "Help"
+          "City": "Kyiv"
         }
       },
       {
-        "message": "i_need_job_button",
+        "message": "dnipro_country",
         "action": {
           "type": "link",
-          "destination": "i_need_job"
+          "destination": "i_can_help"
         },
         "context": {
-          "Need": "Job"
+          "City": "Dnipro"
+        }
+      },
+      {
+        "message": "kharkiv_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "City": "Kharkiv"
+        }
+      },
+      {
+        "message": "melitopol_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "City": "Melitopol"
+        }
+      },
+      {
+        "message": "other_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "City": "Other"
+        }
+      }
+    ]
+  },
+  "select_important_country": {
+    "message": "select_a_country_message",
+    "buttons": [
+      {
+        "message": "poland_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Poland"
+        }
+      },
+      {
+        "message": "romania_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Romania"
+        }
+      },
+      {
+        "message": "moldova_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Moldova"
+        }
+      },
+      {
+        "message": "france_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "France"
+        }
+      },
+      {
+        "message": "germany_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Germany"
+        }
+      },
+      {
+        "message": "italy_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Italy"
+        }
+      },
+      {
+        "message": "austria_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Austria"
+        }
+      },
+      {
+        "message": "spain_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Spain"
+        }
+      },
+      {
+        "message": "sweden_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Sweden"
+        }
+      },
+      {
+        "message": "switzerland_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Switzerland"
+        }
+      },
+      {
+        "message": "belgium_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Belgium"
+        }
+      },
+      {
+        "message": "czech_republic_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Czech Republic"
+        }
+      },
+      {
+        "message": "other_button",
+        "action": {
+          "type": "link",
+          "destination": "select_all_countries"
+        }
+      }
+    ]
+  },
+  "select_all_countries": {
+    "message": "select_a_country_message",
+    "buttons": [
+      {
+        "message": "poland_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Poland"
+        }
+      },
+      {
+        "message": "hungary_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Hungary"
+        }
+      },
+      {
+        "message": "georgia_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Georgia"
+        }
+      },
+      {
+        "message": "moldova_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Moldova"
+        }
+      },
+      {
+        "message": "romania_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Romania"
+        }
+      },
+      {
+        "message": "slovakia_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Slovakia"
+        }
+      },
+      {
+        "message": "bulgaria_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Bulgaria"
+        }
+      },
+      {
+        "message": "costa_rica_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Costa Rica"
+        }
+      },
+      {
+        "message": "czechia_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Czechia"
+        }
+      },
+      {
+        "message": "germany_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Germany"
+        }
+      },
+      {
+        "message": "estonia_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Estonia"
+        }
+      },
+      {
+        "message": "lithuania_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Lithuania"
+        }
+      },
+      {
+        "message": "latvia_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Latvia"
+        }
+      },
+      {
+        "message": "monaco_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Monaco"
+        }
+      },
+      {
+        "message": "sierra_leone_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Sierra Leone"
+        }
+      },
+      {
+        "message": "serbia_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Serbia"
+        }
+      },
+      {
+        "message": "aland_islands_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "\u00c5land Islands"
+        }
+      },
+      {
+        "message": "albania_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Albania"
+        }
+      },
+      {
+        "message": "andorra_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Andorra"
+        }
+      },
+      {
+        "message": "austria_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Austria"
+        }
+      },
+      {
+        "message": "belgium_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Belgium"
+        }
+      },
+      {
+        "message": "bosnia_and_herzegovina_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Bosnia and Herzegovina"
+        }
+      },
+      {
+        "message": "belarus_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Belarus"
+        }
+      },
+      {
+        "message": "switzerland_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Switzerland"
+        }
+      },
+      {
+        "message": "denmark_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Denmark"
+        }
+      },
+      {
+        "message": "spain_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Spain"
+        }
+      },
+      {
+        "message": "finland_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Finland"
+        }
+      },
+      {
+        "message": "france_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "France"
+        }
+      },
+      {
+        "message": "faroe_islands_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Faroe Islands"
+        }
+      },
+      {
+        "message": "united_kingdom_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "United Kingdom"
+        }
+      },
+      {
+        "message": "guernsey_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Guernsey"
+        }
+      },
+      {
+        "message": "gibraltar_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Gibraltar"
+        }
+      },
+      {
+        "message": "greece_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Greece"
+        }
+      },
+      {
+        "message": "croatia_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Croatia"
+        }
+      },
+      {
+        "message": "isle_of_man_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Isle of Man"
+        }
+      },
+      {
+        "message": "ireland_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Ireland"
+        }
+      },
+      {
+        "message": "iceland_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Iceland"
+        }
+      },
+      {
+        "message": "italy_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Italy"
+        }
+      },
+      {
+        "message": "jersey_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Jersey"
+        }
+      },
+      {
+        "message": "liechtenstein_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Liechtenstein"
+        }
+      },
+      {
+        "message": "luxembourg_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Luxembourg"
+        }
+      },
+      {
+        "message": "north_macedonia_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "North Macedonia"
+        }
+      },
+      {
+        "message": "malta_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Malta"
+        }
+      },
+      {
+        "message": "montenegro_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Montenegro"
+        }
+      },
+      {
+        "message": "netherlands_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Netherlands"
+        }
+      },
+      {
+        "message": "norway_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Norway"
+        }
+      },
+      {
+        "message": "portugal_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Portugal"
+        }
+      },
+      {
+        "message": "russian_federation_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Russian Federation"
+        }
+      },
+      {
+        "message": "svalbard_and_jan_mayen_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Svalbard and Jan Mayen"
+        }
+      },
+      {
+        "message": "san_marino_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "San Marino"
+        }
+      },
+      {
+        "message": "slovenia_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Slovenia"
+        }
+      },
+      {
+        "message": "sweden_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Sweden"
+        }
+      },
+      {
+        "message": "ukraine_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Ukraine"
+        }
+      },
+      {
+        "message": "aruba_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Aruba"
+        }
+      },
+      {
+        "message": "afghanistan_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Afghanistan"
+        }
+      },
+      {
+        "message": "angola_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Angola"
+        }
+      },
+      {
+        "message": "anguilla_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Anguilla"
+        }
+      },
+      {
+        "message": "united_arab_emirates_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "United Arab Emirates"
+        }
+      },
+      {
+        "message": "argentina_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Argentina"
+        }
+      },
+      {
+        "message": "armenia_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Armenia"
+        }
+      },
+      {
+        "message": "american_samoa_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "American Samoa"
+        }
+      },
+      {
+        "message": "antarctica_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Antarctica"
+        }
+      },
+      {
+        "message": "french_southern_territories_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "French Southern Territories"
+        }
+      },
+      {
+        "message": "antigua_and_barbuda_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Antigua and Barbuda"
+        }
+      },
+      {
+        "message": "australia_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Australia"
+        }
+      },
+      {
+        "message": "azerbaijan_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Azerbaijan"
+        }
+      },
+      {
+        "message": "burundi_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Burundi"
+        }
+      },
+      {
+        "message": "benin_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Benin"
+        }
+      },
+      {
+        "message": "bonaire_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Bonaire"
+        }
+      },
+      {
+        "message": "burkina_faso_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Burkina Faso"
+        }
+      },
+      {
+        "message": "bangladesh_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Bangladesh"
+        }
+      },
+      {
+        "message": "bahrain_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Bahrain"
+        }
+      },
+      {
+        "message": "bahamas_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Bahamas"
+        }
+      },
+      {
+        "message": "saint_barthelemy_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Saint Barth\u00e9lemy"
+        }
+      },
+      {
+        "message": "belize_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Belize"
+        }
+      },
+      {
+        "message": "bermuda_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Bermuda"
+        }
+      },
+      {
+        "message": "bolivia_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Bolivia"
+        }
+      },
+      {
+        "message": "brazil_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Brazil"
+        }
+      },
+      {
+        "message": "barbados_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Barbados"
+        }
+      },
+      {
+        "message": "brunei_darussalam_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Brunei Darussalam"
+        }
+      },
+      {
+        "message": "bhutan_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Bhutan"
+        }
+      },
+      {
+        "message": "bouvet_island_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Bouvet Island"
+        }
+      },
+      {
+        "message": "botswana_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Botswana"
+        }
+      },
+      {
+        "message": "central_african_republic_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Central African Republic"
+        }
+      },
+      {
+        "message": "canada_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Canada"
+        }
+      },
+      {
+        "message": "cocos_keeling_islands_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Cocos (Keeling) Islands"
+        }
+      },
+      {
+        "message": "chile_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Chile"
+        }
+      },
+      {
+        "message": "china_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "China"
+        }
+      },
+      {
+        "message": "cote_divoire_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "C\u00f4te d'Ivoire"
+        }
+      },
+      {
+        "message": "cameroon_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Cameroon"
+        }
+      },
+      {
+        "message": "congo_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Congo"
+        }
+      },
+      {
+        "message": "congo_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Congo"
+        }
+      },
+      {
+        "message": "cook_islands_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Cook Islands"
+        }
+      },
+      {
+        "message": "colombia_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Colombia"
+        }
+      },
+      {
+        "message": "comoros_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Comoros"
+        }
+      },
+      {
+        "message": "cabo_verde_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Cabo Verde"
+        }
+      },
+      {
+        "message": "cuba_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Cuba"
+        }
+      },
+      {
+        "message": "curacao_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Cura\u00e7ao"
+        }
+      },
+      {
+        "message": "christmas_island_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Christmas Island"
+        }
+      },
+      {
+        "message": "cayman_islands_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Cayman Islands"
+        }
+      },
+      {
+        "message": "cyprus_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Cyprus"
+        }
+      },
+      {
+        "message": "djibouti_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Djibouti"
+        }
+      },
+      {
+        "message": "dominica_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Dominica"
+        }
+      },
+      {
+        "message": "dominican_republic_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Dominican Republic"
+        }
+      },
+      {
+        "message": "algeria_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Algeria"
+        }
+      },
+      {
+        "message": "ecuador_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Ecuador"
+        }
+      },
+      {
+        "message": "egypt_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Egypt"
+        }
+      },
+      {
+        "message": "eritrea_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Eritrea"
+        }
+      },
+      {
+        "message": "western_sahara_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Western Sahara"
+        }
+      },
+      {
+        "message": "ethiopia_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Ethiopia"
+        }
+      },
+      {
+        "message": "fiji_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Fiji"
+        }
+      },
+      {
+        "message": "falkland_islands_malvinas_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Falkland Islands (Malvinas)"
+        }
+      },
+      {
+        "message": "micronesia_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Micronesia"
+        }
+      },
+      {
+        "message": "gabon_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Gabon"
+        }
+      },
+      {
+        "message": "ghana_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Ghana"
+        }
+      },
+      {
+        "message": "guinea_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Guinea"
+        }
+      },
+      {
+        "message": "guadeloupe_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Guadeloupe"
+        }
+      },
+      {
+        "message": "gambia_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Gambia"
+        }
+      },
+      {
+        "message": "guinea-bissau_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Guinea-Bissau"
+        }
+      },
+      {
+        "message": "equatorial_guinea_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Equatorial Guinea"
+        }
+      },
+      {
+        "message": "grenada_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Grenada"
+        }
+      },
+      {
+        "message": "greenland_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Greenland"
+        }
+      },
+      {
+        "message": "guatemala_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Guatemala"
+        }
+      },
+      {
+        "message": "french_guiana_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "French Guiana"
+        }
+      },
+      {
+        "message": "guam_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Guam"
+        }
+      },
+      {
+        "message": "guyana_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Guyana"
+        }
+      },
+      {
+        "message": "hong_kong_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Hong Kong"
+        }
+      },
+      {
+        "message": "heard_island_and_mcdonald_islands_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Heard Island and McDonald Islands"
+        }
+      },
+      {
+        "message": "honduras_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Honduras"
+        }
+      },
+      {
+        "message": "haiti_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Haiti"
+        }
+      },
+      {
+        "message": "indonesia_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Indonesia"
+        }
+      },
+      {
+        "message": "india_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "India"
+        }
+      },
+      {
+        "message": "british_indian_ocean_territory_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "British Indian Ocean Territory"
+        }
+      },
+      {
+        "message": "iran_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Iran"
+        }
+      },
+      {
+        "message": "iraq_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Iraq"
+        }
+      },
+      {
+        "message": "israel_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Israel"
+        }
+      },
+      {
+        "message": "jamaica_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Jamaica"
+        }
+      },
+      {
+        "message": "jordan_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Jordan"
+        }
+      },
+      {
+        "message": "japan_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Japan"
+        }
+      },
+      {
+        "message": "kazakhstan_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Kazakhstan"
+        }
+      },
+      {
+        "message": "kenya_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Kenya"
+        }
+      },
+      {
+        "message": "kyrgyzstan_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Kyrgyzstan"
+        }
+      },
+      {
+        "message": "cambodia_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Cambodia"
+        }
+      },
+      {
+        "message": "kiribati_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Kiribati"
+        }
+      },
+      {
+        "message": "saint_kitts_and_nevis_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Saint Kitts and Nevis"
+        }
+      },
+      {
+        "message": "korea_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Korea"
+        }
+      },
+      {
+        "message": "kuwait_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Kuwait"
+        }
+      },
+      {
+        "message": "lao_peoples_democratic_republic_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Lao People's Democratic Republic"
+        }
+      },
+      {
+        "message": "lebanon_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Lebanon"
+        }
+      },
+      {
+        "message": "liberia_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Liberia"
+        }
+      },
+      {
+        "message": "libya_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Libya"
+        }
+      },
+      {
+        "message": "saint_lucia_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Saint Lucia"
+        }
+      },
+      {
+        "message": "sri_lanka_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Sri Lanka"
+        }
+      },
+      {
+        "message": "lesotho_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Lesotho"
+        }
+      },
+      {
+        "message": "macao_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Macao"
+        }
+      },
+      {
+        "message": "saint_martin_french_part_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Saint Martin (French part)"
+        }
+      },
+      {
+        "message": "morocco_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Morocco"
+        }
+      },
+      {
+        "message": "madagascar_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Madagascar"
+        }
+      },
+      {
+        "message": "maldives_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Maldives"
+        }
+      },
+      {
+        "message": "mexico_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Mexico"
+        }
+      },
+      {
+        "message": "marshall_islands_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Marshall Islands"
+        }
+      },
+      {
+        "message": "mali_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Mali"
+        }
+      },
+      {
+        "message": "myanmar_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Myanmar"
+        }
+      },
+      {
+        "message": "mongolia_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Mongolia"
+        }
+      },
+      {
+        "message": "northern_mariana_islands_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Northern Mariana Islands"
+        }
+      },
+      {
+        "message": "mozambique_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Mozambique"
+        }
+      },
+      {
+        "message": "mauritania_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Mauritania"
+        }
+      },
+      {
+        "message": "montserrat_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Montserrat"
+        }
+      },
+      {
+        "message": "martinique_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Martinique"
+        }
+      },
+      {
+        "message": "mauritius_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Mauritius"
+        }
+      },
+      {
+        "message": "malawi_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Malawi"
+        }
+      },
+      {
+        "message": "malaysia_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Malaysia"
+        }
+      },
+      {
+        "message": "mayotte_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Mayotte"
+        }
+      },
+      {
+        "message": "namibia_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Namibia"
+        }
+      },
+      {
+        "message": "new_caledonia_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "New Caledonia"
+        }
+      },
+      {
+        "message": "niger_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Niger"
+        }
+      },
+      {
+        "message": "norfolk_island_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Norfolk Island"
+        }
+      },
+      {
+        "message": "nigeria_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Nigeria"
+        }
+      },
+      {
+        "message": "nicaragua_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Nicaragua"
+        }
+      },
+      {
+        "message": "niue_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Niue"
+        }
+      },
+      {
+        "message": "nepal_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Nepal"
+        }
+      },
+      {
+        "message": "nauru_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Nauru"
+        }
+      },
+      {
+        "message": "new_zealand_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "New Zealand"
+        }
+      },
+      {
+        "message": "oman_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Oman"
+        }
+      },
+      {
+        "message": "pakistan_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Pakistan"
+        }
+      },
+      {
+        "message": "panama_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Panama"
+        }
+      },
+      {
+        "message": "pitcairn_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Pitcairn"
+        }
+      },
+      {
+        "message": "peru_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Peru"
+        }
+      },
+      {
+        "message": "philippines_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Philippines"
+        }
+      },
+      {
+        "message": "palau_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Palau"
+        }
+      },
+      {
+        "message": "papua_new_guinea_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Papua New Guinea"
+        }
+      },
+      {
+        "message": "puerto_rico_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Puerto Rico"
+        }
+      },
+      {
+        "message": "korea_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Korea"
+        }
+      },
+      {
+        "message": "paraguay_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Paraguay"
+        }
+      },
+      {
+        "message": "palestine_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Palestine"
+        }
+      },
+      {
+        "message": "french_polynesia_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "French Polynesia"
+        }
+      },
+      {
+        "message": "qatar_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Qatar"
+        }
+      },
+      {
+        "message": "reunion_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "R\u00e9union"
+        }
+      },
+      {
+        "message": "rwanda_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Rwanda"
+        }
+      },
+      {
+        "message": "saudi_arabia_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Saudi Arabia"
+        }
+      },
+      {
+        "message": "sudan_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Sudan"
+        }
+      },
+      {
+        "message": "senegal_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Senegal"
+        }
+      },
+      {
+        "message": "singapore_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Singapore"
+        }
+      },
+      {
+        "message": "south_georgia_and_the_south_sandwich_islands_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "South Georgia and the South Sandwich Islands"
+        }
+      },
+      {
+        "message": "saint_helena_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Saint Helena"
+        }
+      },
+      {
+        "message": "solomon_islands_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Solomon Islands"
+        }
+      },
+      {
+        "message": "el_salvador_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "El Salvador"
+        }
+      },
+      {
+        "message": "somalia_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Somalia"
+        }
+      },
+      {
+        "message": "saint_pierre_and_miquelon_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Saint Pierre and Miquelon"
+        }
+      },
+      {
+        "message": "south_sudan_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "South Sudan"
+        }
+      },
+      {
+        "message": "sao_tome_and_principe_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Sao Tome and Principe"
+        }
+      },
+      {
+        "message": "suriname_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Suriname"
+        }
+      },
+      {
+        "message": "eswatini_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Eswatini"
+        }
+      },
+      {
+        "message": "sint_maarten_dutch_part_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Sint Maarten (Dutch part)"
+        }
+      },
+      {
+        "message": "seychelles_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Seychelles"
+        }
+      },
+      {
+        "message": "syrian_arab_republic_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Syrian Arab Republic"
+        }
+      },
+      {
+        "message": "turks_and_caicos_islands_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Turks and Caicos Islands"
+        }
+      },
+      {
+        "message": "chad_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Chad"
+        }
+      },
+      {
+        "message": "togo_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Togo"
+        }
+      },
+      {
+        "message": "thailand_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Thailand"
+        }
+      },
+      {
+        "message": "tajikistan_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Tajikistan"
+        }
+      },
+      {
+        "message": "tokelau_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Tokelau"
+        }
+      },
+      {
+        "message": "turkmenistan_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Turkmenistan"
+        }
+      },
+      {
+        "message": "timor-leste_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Timor-Leste"
+        }
+      },
+      {
+        "message": "tonga_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Tonga"
+        }
+      },
+      {
+        "message": "trinidad_and_tobago_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Trinidad and Tobago"
+        }
+      },
+      {
+        "message": "tunisia_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Tunisia"
+        }
+      },
+      {
+        "message": "turkey_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Turkey"
+        }
+      },
+      {
+        "message": "tuvalu_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Tuvalu"
+        }
+      },
+      {
+        "message": "taiwan_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Taiwan"
+        }
+      },
+      {
+        "message": "tanzania_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Tanzania"
+        }
+      },
+      {
+        "message": "uganda_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Uganda"
+        }
+      },
+      {
+        "message": "united_states_minor_outlying_islands_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "United States Minor Outlying Islands"
+        }
+      },
+      {
+        "message": "uruguay_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Uruguay"
+        }
+      },
+      {
+        "message": "united_states_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "United States"
+        }
+      },
+      {
+        "message": "uzbekistan_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Uzbekistan"
+        }
+      },
+      {
+        "message": "holy_see_vatican_city_state_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Holy See (Vatican City State)"
+        }
+      },
+      {
+        "message": "saint_vincent_and_the_grenadines_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Saint Vincent and the Grenadines"
+        }
+      },
+      {
+        "message": "venezuela_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Venezuela"
+        }
+      },
+      {
+        "message": "virgin_islands_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Virgin Islands"
+        }
+      },
+      {
+        "message": "virgin_islands_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Virgin Islands"
+        }
+      },
+      {
+        "message": "viet_nam_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Viet Nam"
+        }
+      },
+      {
+        "message": "vanuatu_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Vanuatu"
+        }
+      },
+      {
+        "message": "wallis_and_futuna_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Wallis and Futuna"
+        }
+      },
+      {
+        "message": "samoa_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Samoa"
+        }
+      },
+      {
+        "message": "yemen_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Yemen"
+        }
+      },
+      {
+        "message": "south_africa_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "South Africa"
+        }
+      },
+      {
+        "message": "zambia_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Zambia"
+        }
+      },
+      {
+        "message": "zimbabwe_country",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help"
+        },
+        "context": {
+          "Country": "Zimbabwe"
         }
       }
     ]
@@ -147,88 +2853,392 @@
     ]
   },
   "i_need_shelter": {
-    "message": "how_many_people_looking_shelter_message",
-    "action": {
-      "type": "input",
-      "input_type": "number",
-      "post_action_destination": "how_long_need_shelter"
-    }
-  },
-  "how_long_need_shelter": {
-    "message": "how_long_need_shelter_message",
-    "action": {
-      "type": "input",
-      "input_type": "number",
-      "post_action_destination": "data_processing_agreement"
-    }
-  },
-  "i_need_medical_support": {
-    "message": "i_need_medical_support_message",
-    "action": {
-      "type": "input",
-      "input_type": "text",
-      "post_action_destination": "data_processing_agreement"
-    }
-  },
-  "i_need_material_support": {
-    "message": "what_kind_material_support_message",
-    "action": {
-      "type": "input",
-      "input_type": "text",
-      "post_action_destination": "data_processing_agreement"
-    }
-  },
-  "i_need_jewish_organization": {
-    "message": "jewish_info_message",
-    "action": {
-      "type": "input",
-      "input_type": "text",
-      "post_action_destination": "data_processing_agreement"
-    }
-  },
-  "i_need_psychological": {
-    "message": "psychological_info_message",
-    "action": {
-      "type": "input",
-      "input_type": "text",
-      "post_action_destination": "root"
-    }
-  },
-  "i_need_lawyers": {
-    "message": "lawyers_info_message",
-    "action": {
-      "type": "input",
-      "input_type": "text",
-      "post_action_destination": "root"
-    }
-  },
-  "data_processing_agreement": {
-    "message": "data_processing_agreement_consent_message",
+    "message": "i_need_shelter_info_message",
     "buttons": [
       {
-        "message": "no_button",
+        "message": "main_menu_button",
         "action": {
           "type": "link",
-          "destination": "______i_do_not_consent"
-        }
-      },
-      {
-        "message": "share_your_telegram_contact_message",
-        "action": {
-          "type": "link",
-          "destination": "______"
+          "destination": "main_menu"
         }
       }
     ]
   },
-  "i_need_job": {
-    "message": "job_info_message",
+  "i_need_medical_support": {
+    "message": "i_need_medical_support_message",
     "buttons": [
       {
-        "message": "back_to_main_menu_button",
+        "message": "main_menu_button",
         "action": {
           "type": "link",
-          "destination": "root"
+          "destination": "main_menu"
+        }
+      }
+    ]
+  },
+  "i_need_material_support": {
+    "message": "i_need_material_support_message",
+    "buttons": [
+      {
+        "message": "main_menu_button",
+        "action": {
+          "type": "link",
+          "destination": "main_menu"
+        }
+      }
+    ]
+  },
+  "i_need_jewish_organization": {
+    "message": "i_need_jewish_info_message",
+    "buttons": [
+      {
+        "message": "main_menu_button",
+        "action": {
+          "type": "link",
+          "destination": "main_menu"
+        }
+      }
+    ]
+  },
+  "i_need_psychological": {
+    "message": "i_need_psychological_info_message",
+    "buttons": [
+      {
+        "message": "main_menu_button",
+        "action": {
+          "type": "link",
+          "destination": "main_menu"
+        }
+      }
+    ]
+  },
+  "i_need_lawyers": {
+    "message": "i_need_lawyers_info_message",
+    "buttons": [
+      {
+        "message": "main_menu_button",
+        "action": {
+          "type": "link",
+          "destination": "main_menu"
+        }
+      }
+    ]
+  },
+  "i_can_help_i_represent": {
+    "message": "i_represent_message",
+    "buttons": [
+      {
+        "message": "government_button",
+        "action": {
+          "type": "link",
+          "destination": "can_help_i_am_now_in"
+        },
+        "context": {
+          "Represent": "Government"
+        }
+      },
+      {
+        "message": "non_government_org_button",
+        "action": {
+          "type": "link",
+          "destination": "can_help_i_am_now_in"
+        },
+        "context": {
+          "Represent": "Non-government organization"
+        }
+      },
+      {
+        "message": "company_button",
+        "action": {
+          "type": "link",
+          "destination": "can_help_i_am_now_in"
+        },
+        "context": {
+          "Represent": "Company"
+        }
+      },
+      {
+        "message": "individual_button",
+        "action": {
+          "type": "link",
+          "destination": "can_help_i_am_now_in"
+        },
+        "context": {
+          "Represent": "Individual"
+        }
+      }
+    ]
+  },
+  "can_help_i_am_now_in": {
+    "message": "i_am_now_in_message",
+    "buttons": [
+      {
+        "message": "country_ukraine",
+        "action": {
+          "type": "link",
+          "destination": "select_ukrainian_city"
+        },
+        "context": {
+          "Country": "Ukraine"
+        }
+      },
+      {
+        "message": "other_country_button",
+        "action": {
+          "type": "link",
+          "destination": "select_important_country"
+        }
+      }
+    ]
+  },
+  "i_can_help": {
+    "message": "i_can_help_message",
+    "buttons": [
+      {
+        "message": "i_can_help_to_mothers_button",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help_to_mothers"
+        }
+      },
+      {
+        "message": "i_can_help_law_button",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help_law"
+        }
+      },
+      {
+        "message": "i_can_help_psychology_button",
+        "action": {
+          "type": "link",
+          "destination": "i_can_help_psychology"
+        }
+      },
+      {
+        "message": "i_can_volunteer_button",
+        "action": {
+          "type": "link",
+          "destination": "i_can_volunteer"
+        }
+      },
+      {
+        "message": "i_can_provide_material_support_button",
+        "action": {
+          "type": "link",
+          "destination": "i_can_provide_material_support"
+        }
+      },
+      {
+        "message": "i_can_provide_financial_support_button",
+        "action": {
+          "type": "link",
+          "destination": "i_can_provide_financial_support"
+        }
+      },
+      {
+        "message": "i_can_provide_employment_button",
+        "action": {
+          "type": "link",
+          "destination": "i_can_provide_employment"
+        }
+      },
+      {
+        "message": "i_can_provide_shelter_button",
+        "action": {
+          "type": "link",
+          "destination": "i_can_provide_shelter"
+        }
+      },
+      {
+        "message": "i_can_provide_food_button",
+        "action": {
+          "type": "link",
+          "destination": "i_can_provide_food"
+        }
+      },
+      {
+        "message": "i_can_provide_transport_button",
+        "action": {
+          "type": "link",
+          "destination": "i_can_provide_transport"
+        }
+      },
+      {
+        "message": "i_can_provide_transport_people_button",
+        "action": {
+          "type": "link",
+          "destination": "i_can_provide_transport_people"
+        }
+      },
+      {
+        "message": "i_can_provide_assistance_in_ukraine_button",
+        "action": {
+          "type": "link",
+          "destination": "i_can_provide_assistance_in_ukraine"
+        }
+      },
+      {
+        "message": "i_can_provide_other_button",
+        "action": {
+          "type": "link",
+          "destination": "i_can_provide_other"
+        }
+      }
+    ]
+  },
+  "i_can_help_to_mothers": {
+    "message": "i_can_help_mothers_message",
+    "buttons": [
+      {
+        "message": "main_menu_button",
+        "action": {
+          "type": "link",
+          "destination": "main_menu"
+        }
+      }
+    ]
+  },
+  "i_can_help_law": {
+    "message": "i_can_help_law_message",
+    "buttons": [
+      {
+        "message": "main_menu_button",
+        "action": {
+          "type": "link",
+          "destination": "main_menu"
+        }
+      }
+    ]
+  },
+  "i_can_help_psychology": {
+    "message": "i_can_help_psychology_message",
+    "buttons": [
+      {
+        "message": "main_menu_button",
+        "action": {
+          "type": "link",
+          "destination": "main_menu"
+        }
+      }
+    ]
+  },
+  "i_can_volunteer": {
+    "message": "i_can_volunteer_message",
+    "buttons": [
+      {
+        "message": "main_menu_button",
+        "action": {
+          "type": "link",
+          "destination": "main_menu"
+        }
+      }
+    ]
+  },
+  "i_can_provide_material_support": {
+    "message": "i_can_provide_material_support_message",
+    "buttons": [
+      {
+        "message": "main_menu_button",
+        "action": {
+          "type": "link",
+          "destination": "main_menu"
+        }
+      }
+    ]
+  },
+  "i_can_provide_financial_support": {
+    "message": "i_can_provide_financial_support_message",
+    "buttons": [
+      {
+        "message": "main_menu_button",
+        "action": {
+          "type": "link",
+          "destination": "main_menu"
+        }
+      }
+    ]
+  },
+  "i_can_provide_employment": {
+    "message": "i_can_provide_employment_message",
+    "buttons": [
+      {
+        "message": "main_menu_button",
+        "action": {
+          "type": "link",
+          "destination": "main_menu"
+        }
+      }
+    ]
+  },
+  "i_can_provide_shelter": {
+    "message": "i_can_provide_shelter_message",
+    "buttons": [
+      {
+        "message": "main_menu_button",
+        "action": {
+          "type": "link",
+          "destination": "main_menu"
+        }
+      }
+    ]
+  },
+  "i_can_provide_food": {
+    "message": "i_can_provide_food_message",
+    "buttons": [
+      {
+        "message": "main_menu_button",
+        "action": {
+          "type": "link",
+          "destination": "main_menu"
+        }
+      }
+    ]
+  },
+  "i_can_provide_transport": {
+    "message": "i_can_provide_transport_message",
+    "buttons": [
+      {
+        "message": "main_menu_button",
+        "action": {
+          "type": "link",
+          "destination": "main_menu"
+        }
+      }
+    ]
+  },
+  "i_can_provide_transport_people": {
+    "message": "i_can_provide_transport_people_message",
+    "buttons": [
+      {
+        "message": "main_menu_button",
+        "action": {
+          "type": "link",
+          "destination": "main_menu"
+        }
+      }
+    ]
+  },
+  "i_can_provide_assistance_in_ukraine": {
+    "message": "i_can_provide_assistance_in_ukraine_message",
+    "buttons": [
+      {
+        "message": "main_menu_button",
+        "action": {
+          "type": "link",
+          "destination": "main_menu"
+        }
+      }
+    ]
+  },
+  "i_can_provide_other": {
+    "message": "i_can_provide_other_message",
+    "buttons": [
+      {
+        "message": "main_menu_button",
+        "action": {
+          "type": "link",
+          "destination": "main_menu"
         }
       }
     ]
