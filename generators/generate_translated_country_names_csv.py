@@ -5,7 +5,7 @@ from utils import fix_country_name, country_name_to_key
 import pycountry
 
 
-with open('country_translations.csv', 'w') as f:
+with open('static/country_translations.csv', 'w') as f:
     # create the csv writer
     writer = csv.writer(f)
 

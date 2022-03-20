@@ -3,7 +3,7 @@ aruba_country,Aruba,Аруба,Аруба,Country name for Aruba
 afghanistan_country,Afghanistan,Афганістан,Афганистан,Country name for Afghanistan
 angola_country,Angola,Ангола,Ангола,Country name for Angola
 anguilla_country,Anguilla,Ангілья,Ангвилла,Country name for Anguilla
-åland_islands_country,Åland Islands,Аландські острови,Аландские острова,Country name for Åland Islands
+aland_islands_country,Åland Islands,Аландські острови,Аландские острова,Country name for Åland Islands
 albania_country,Albania,Албанія,Албания,Country name for Albania
 andorra_country,Andorra,Андорра,Андорра,Country name for Andorra
 united_arab_emirates_country,United Arab Emirates,Об’єднані Арабські Емірати,Объединённые Арабские Эмираты,Country name for United Arab Emirates
@@ -26,7 +26,7 @@ bulgaria_country,Bulgaria,Болгарія,Болгария,Country name for Bul
 bahrain_country,Bahrain,Бахрейн,Бахрейн,Country name for Bahrain
 bahamas_country,Bahamas,Багамські острови,Багамы,Country name for Bahamas
 bosnia_and_herzegovina_country,Bosnia and Herzegovina,Боснія та Герцеговина,Босния и Герцеговина,Country name for Bosnia and Herzegovina
-saint_barthélemy_country,Saint Barthélemy,Сен-Бартельмі,Сен-Бартельми,Country name for Saint Barthélemy
+saint_barthelemy_country,Saint Barthélemy,Сен-Бартельмі,Сен-Бартельми,Country name for Saint Barthélemy
 belarus_country,Belarus,Білорусь,Беларусь,Country name for Belarus
 belize_country,Belize,Беліз,Белиз,Country name for Belize
 bermuda_country,Bermuda,Бермуди,Бермуды,Country name for Bermuda
@@ -43,7 +43,7 @@ cocos_keeling_islands_country,Cocos (Keeling) Islands,Кокосові (Кілі
 switzerland_country,Switzerland,Швейцарія,Швейцария,Country name for Switzerland
 chile_country,Chile,Чилі,Чили,Country name for Chile
 china_country,China,Китай,Китай,Country name for China
-côte_divoire_country,Côte d'Ivoire,Кот-д'Івуар,Кот-д'Ивуар,Country name for Côte d'Ivoire
+cote_divoire_country,Côte d'Ivoire,Кот-д'Івуар,Кот-д'Ивуар,Country name for Côte d'Ivoire
 cameroon_country,Cameroon,Камерун,Камерун,Country name for Cameroon
 congo_country,Congo,Конго,Демократическая Республика Конго,"Country name for Congo, The Democratic Republic of the"
 congo_country,Congo,Конго,Конго,Country name for Congo
@@ -53,7 +53,7 @@ comoros_country,Comoros,Коморські острови,Коморские о�
 cabo_verde_country,Cabo Verde,Cabo Verde,Cabo Verde,Country name for Cabo Verde
 costa_rica_country,Costa Rica,Коста-Рика,Коста-Рика,Country name for Costa Rica
 cuba_country,Cuba,Куба,Куба,Country name for Cuba
-curaçao_country,Curaçao,Кюрасао,Кюрасао,Country name for Curaçao
+curacao_country,Curaçao,Кюрасао,Кюрасао,Country name for Curaçao
 christmas_island_country,Christmas Island,Острів Різдва,Остров Рождества,Country name for Christmas Island
 cayman_islands_country,Cayman Islands,Кайманові острови,Каймановы острова,Country name for Cayman Islands
 cyprus_country,Cyprus,Кіпр,Кипр,Country name for Cyprus
@@ -186,7 +186,7 @@ paraguay_country,Paraguay,Парагвай,Парагвай,Country name for Par
 palestine_country,Palestine,Палестина,Палестина,"Country name for Palestine, State of"
 french_polynesia_country,French Polynesia,Французька Полінезія,Французская Полинезия,Country name for French Polynesia
 qatar_country,Qatar,Катар,Катар,Country name for Qatar
-réunion_country,Réunion,Реюньйон,Реюньон,Country name for Réunion
+reunion_country,Réunion,Реюньйон,Реюньон,Country name for Réunion
 romania_country,Romania,Румунія,Румыния,Country name for Romania
 russian_federation_country,Russian Federation,Російська Федерація,Российская Федерация,Country name for Russian Federation
 rwanda_country,Rwanda,Руанда,Руанда,Country name for Rwanda
